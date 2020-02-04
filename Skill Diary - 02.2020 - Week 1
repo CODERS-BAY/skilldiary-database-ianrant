@@ -11,7 +11,7 @@ KNOWLEDGE GAINED:
 IntelliJ may auomatically insert comments that can be mistaken for code. When I am uncertain and I delete the element
 in question AND the whole code still works - then it's a comment.
 
-INVESTIGATION NEEDED:
+IMPROVEMENT/INSIGHT NEEDED:
 I will devote some time this evening to how classes, methods, constructors and their interaction works.
 
 
@@ -22,4 +22,8 @@ Toodles!
 
 ---------------------
 
+TUESDAY, February 4th
 
+IMPROVEMENT/INSIGHT NEEDED:
+I might understand the concept of GIT and/or the sync better if I was provided a more complex example that demonstrates
+a collaboration of several people - the example video from GIT does not provide that level of detail.
