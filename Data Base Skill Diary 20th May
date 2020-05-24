@@ -3,8 +3,20 @@
 KNOWLEDGE GAINED:
 * an engaging overview of noSQL and MongoDB
 * an equally engaging overview of hierarchical data bases
-* a detailled insight into Oracle SQL
-* 
+* a veeeeeeery detailled insight into Oracle SQL
+* and from what I can remember: 
+
+* 1.) a useful tip on how to write "safer" SQL statements, namely by encapsulating them with "begin transaction" and "commit"
+* this will ensure that the statements are only performed if the entire transaction can be completed
+* otherwise everything will be subject to a "rollback", which means that all changes are made null and void
+
+* 2.) there is a possibility to undo a rollback by performing a "redo" statement 
+* which will then restore/redo all the statements since the last rollback
+
+* 3.) then there is the difference between a transaction and a non-transaction.
+* a transaction is regarded anything that alters the structure of the entities within a database
+* this includes creating, altering or dropping a table (and the select statement)
+* excluded from this rule are: insert, update and delete statements within an entitity
 
 IMPROVEMENT/INSIGHT NEEDED:
  
