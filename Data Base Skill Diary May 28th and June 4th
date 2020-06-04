@@ -1,6 +1,14 @@
-## THURSDAY, June 4th
+## THURSDAYS, MAY28th and June 4th
 
 KNOWLEDGE GAINED:
+
+There are three different kinds of database implementations:
+embedded ==> db is in the project file of the program that is accesses
+remote ==> db is within the scope of the same network (or even machine?)
+network remote ==> db is outside the scope of the network
+
+
+
 
 SQL simple selects
 
