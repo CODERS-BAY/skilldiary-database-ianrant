@@ -1,0 +1,118 @@
+## THURSDAY, June 4th
+
+KNOWLEDGE GAINED:
+
+SQL simple selects
+
+A(LIA)S ==> renames a table column to a custom name - example:
+SELECT employee_id, last_name, job_id, hire_date AS start_date FROM employees ==> SELECT column_name AS different_name ...
+
+DISTINCT ==> returns only the first column from N columns in a request - example:
+SELECT DISTINCT job_id FROM employees ==> only one job_id is returned
+
+ORDER BY column_name ASC/DESC ==> orders a result set by the ASCending or DESCending display of a certain column
+
+----------
+
+
+SQL join
+
+SELECT SUM(salary), job_id FROM employees GROUP BY job_id ORDER BY SUM(salary) DESC; 
+==> calculates the sum of all employee salaries
+
+SELECT AVG(salary) FROM employees
+==> returns the average of numeral values
+
+SELECT 
+employees.first_name as "Name", 
+employees.last_name as "Surname", 
+departments.department_name as "Department" 
+FROM 
+employees JOIN departments 
+ON employees.department_id = departments.department_id
+==> selects the first and last name of every employee and their department name
+
+
+
+SELECT 
+departments.department_name, 
+locations.street_address, 
+locations.postal_code,
+locations.city,
+locations.state_province,
+countries.country_name
+FROM departments 
+JOIN locations ON departments.location_id = locations.location_id
+JOIN countries ON locations.country_id = countries.country_id
+==> selects the names the departments, their location and country
+
+
+
+SELECT 
+departments.department_name AS "Department", 
+
+CONCAT(employees.first_name, " " ,employees.last_name) AS "Manager", 
+
+locations.street_address AS "Street", 
+locations.postal_code AS "Zip Code", 
+locations.city AS "City", 
+locations.state_province AS "State", 
+
+countries.country_name AS "Country" 
+
+FROM departments 
+JOIN employees ON departments.manager_id = employees.manager_id 
+JOIN locations ON departments.location_id = locations.location_id 
+JOIN countries ON locations.country_id = countries.country_id
+==> returns the department name, first/last name of the manager, location data and coutry of the department
+
+
+SELECT 
+CONCAT(employees.first_name, " ", employees.last_name) AS "Name", 
+employees.salary AS "Salary", jobs.job_title AS "Job", 
+departments.department_id AS "Department" 
+FROM employees 
+JOIN jobs ON employees.job_id = jobs.job_id 
+JOIN departments ON employees.department_id = departments.department_id
+==> returns the name, job description and department of employees
+
+
+
+SELECT 
+CONCAT(A.last_name, ", ", A.first_name) AS "Manager",
+CONCAT(B.last_name, ", ", B.first_name) AS "Employee"
+FROM employees A, employees B
+WHERE A.employee_id = B.manager_id ORDER BY A.last_name ASC
+
+
+--------
+
+
+SELECT SUM(salary),  job_id FROM employees GROUP BY job_id ORDER BY SUM(salary) DESC;
+
+==> group by zeigt alle ids als gruppe an, die durch eine einzelne respräsentiert werden
+
+
+inner join ==> sucht nach werten die auf beiden seiten gleich sind
+left join ==> sucht nach werten, die links größer sind
+right join ==> sucht nach werten, die rechts größer sind
+outer join ==> sucht nach werten, die nicht gleich sind
+==> es geht also immer um die logischen operatoren im ON statement
+
+
+
+JOIN syntax:
+
+SELECT employees.first_name, employees.last_name, department_name 
+FROM employees 
+JOIN departments
+ON employees.department_id = departments.department_id
+
+
+
+
+
+
+IMPROVEMENT/INSIGHT NEEDED:
+ 
+* somebody give me some imagination!!!!
