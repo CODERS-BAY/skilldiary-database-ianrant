@@ -110,6 +110,24 @@ ON employees.department_id = departments.department_id
 
 
 
+create table TODO
+(
+    TODO_ID INTEGER NOT NULL GENERATED ALWAYS AS Identity(Start with 1, increment by 1),
+    TODO_NAME VARCHAR(50),
+    PRIMARY KEY (todo_id)
+);
+create table TASK
+(
+    TASK_ID INTEGER NOT NULL GENERATED ALWAYS AS Identity(Start with 1, increment by 1),
+    TODO_ID INTEGER,
+    TASK_NAME VARCHAR(50),
+    PRIMARY KEY (task_id),
+    CONSTRAINT todo_id FOREIGN KEY (todo_id)
+        REFERENCES todo(todo_id) ON DELETE CASCADE
+);
+
+
+
 
 
 
