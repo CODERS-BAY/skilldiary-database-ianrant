@@ -135,6 +135,18 @@ create table TASK
 );
 
 
+JOIN WITHOUT JOIN SYNTAX
+
+SELECT department_name, 
+       postal_code, 
+       city, 
+       state_province, 
+       street_address
+FROM   departments, 
+       locations
+WHERE  departments.location_id = locations.location_id;
+
+
 
 
 
